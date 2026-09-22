@@ -1,7 +1,8 @@
 # AESNI vs Software AES
----
+
+
 A C++ implementation of a modified AES-128 cipher featuring both a conventional software implementation and an Intel AES-NI hardware-accelerated implementation, along with correctness verification and performance benchmarking.
----
+
 
 ## Contents
 
