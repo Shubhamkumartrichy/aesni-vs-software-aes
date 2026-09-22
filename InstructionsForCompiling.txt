@@ -1,0 +1,38 @@
+CS 6160: Introduction to Cryptology - Programming Assignment 2
+Name: Shubham Kumar | Roll No.: cs26mtech12012
+
+COMPILER INFORMATION:
+Compiler  : g++ (Ubuntu 15.2.0)
+Standard  : C++17
+Tested On : 12th Gen Intel Core i7-1260P, Ubuntu 64-bit
+
+================================================================
+QUESTION 1: AES-128 Software vs AES-NI (Q1.cpp)
+
+Compile:
+  g++ -std=c++17 -O3 -maes -msse4.1 Q1.cpp -o Q1
+
+Run:
+  ./Q1
+
+Flags:
+  -std=c++17  : C++17 standard
+  -O3         : Compiler optimization for benchmarking
+  -maes       : Enables AES-NI hardware instructions
+  -msse4.1    : Required for _mm_shuffle_epi8 (ShiftRows)
+
+================================================================
+QUESTION 2: GF(2^3) Multiplication Table (Q2.cpp)
+
+Compile:
+  g++ Q2.cpp -o Q2   
+
+Run:
+  ./Q2
+
+Note: No special architecture flags required.
+
+================================================================
+NOTES
+- Q1 requires a CPU with AES-NI support. To check, run:
+    grep -m1 "aes" /proc/cpuinfo
